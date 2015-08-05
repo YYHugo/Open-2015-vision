@@ -124,6 +124,10 @@ while(ret != None):
     edges_yellow = cv2.Canny( edges_yellow, canny_thres1, canny_thres2);
     edges_red = cv2.Canny( edges_red, canny_thres1, canny_thres2);
     
+    # Bitwise-AND (mask original image) get the region of interest
+    res_yellow = cv2.bitwise_and(frame,frame, mask= mask_yellow);
+    res_red = cv2.bitwise_and(frame,frame, mask= mask_red);
+    
     #Show on screen the results of each process
     cv2.imshow('Original frame',frame);
     cv2.imshow('res_red',res_red);
