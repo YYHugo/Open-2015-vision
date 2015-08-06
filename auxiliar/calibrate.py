@@ -27,7 +27,7 @@ if (argc < 1):
 cap = cv2.VideoCapture(camera);
 
 cam_fps = 1;
-cam_width = 400;
+cam_width = 200;
 cam_heigth = 200;
 
 #configure cam properties to reduce computing pixels
